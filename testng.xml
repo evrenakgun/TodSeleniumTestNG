@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite"  parallel="classes" thread-count="2">
+    <test name="LoginTest">
+        <classes>
+            <class name="LoginTests">
+                <methods>
+                    <include name="invalidLoginTest_InvalidEmailInvalidPassword"/>
+                    <include name="invalidLoginTest_ValidEmailInvalidPassword"/>
+                    <include name="successfulLoginTest"/>
+                </methods>
+            </class>
+            <class name="ProfileSelectionTests"/>
+        </classes>
+    </test>
+</suite>
